@@ -32,6 +32,8 @@ pipeline {
 
         stage('Deploy en Firebase') {
     steps {
+        sh '''printf '{\n  "hosting": {\n    "public": "dist",\n    "ignore": ["firebase.json","**/.*","**/node_modules/**"],\n    "rewrites": [{"source": "**","destination": "/index.html"}]\n  }\n}' > firebase.json'''
+        sh '''printf '{\n  "projects": {\n    "default": "mi-juego-d636c"\n  }\n}' > .firebaserc'''
         sh 'firebase deploy --token $FIREBASE_TOKEN --non-interactive'
     }
 }
