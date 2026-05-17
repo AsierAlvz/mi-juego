@@ -48,3 +48,7 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+## Elden Ring Memory Game
+
+Juego de memoria con temática de Elden Ring desarrollado con Vue.js
