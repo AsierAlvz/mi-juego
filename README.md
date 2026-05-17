@@ -48,3 +48,10 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+## Sistema de puntuación
+
+- Contador de movimientos
+- Temporizador
+- Récords guardados en localStorage
+- Dos niveles de dificultad (4x4 y 6x6)
