@@ -20,7 +20,7 @@ pipeline {
 
         stage('Ejecucion de tests') {
             steps {
-                sh 'npm run test:unit -- --run'
+                sh 'npm run test -- --run'
             }
         }
 
@@ -31,12 +31,11 @@ pipeline {
         }
 
         stage('Deploy en Firebase') {
-    steps {
-        sh '''printf '{\n  "hosting": {\n    "public": "dist",\n    "ignore": ["firebase.json","**/.*","**/node_modules/**"],\n    "rewrites": [{"source": "**","destination": "/index.html"}]\n  }\n}' > firebase.json'''
-        sh '''printf '{\n  "projects": {\n    "default": "mi-juego-d636c"\n  }\n}' > .firebaserc'''
-        sh 'firebase deploy --token $FIREBASE_TOKEN --non-interactive'
-    }
-}
+            steps {
+                sh 'npm install -g firebase-tools'
+                sh 'firebase deploy --token $FIREBASE_TOKEN --non-interactive'
+            }
+        }
     }
 
     post {
