@@ -31,11 +31,10 @@ pipeline {
         }
 
         stage('Deploy en Firebase') {
-            steps {
-                sh 'npm install -g firebase-tools'
-                sh 'firebase deploy --token $FIREBASE_TOKEN --non-interactive'
-            }
-        }
+    steps {
+        sh 'firebase deploy --token $FIREBASE_TOKEN --non-interactive'
+    }
+}
     }
 
     post {
