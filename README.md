@@ -49,9 +49,6 @@ npm run test:unit
 npm run lint
 ```
 
-## Sistema de puntuación
+## Elden Ring Memory Game
 
-- Contador de movimientos
-- Temporizador
-- Récords guardados en localStorage
-- Dos niveles de dificultad (4x4 y 6x6)
+Juego de memoria con temática de Elden Ring desarrollado con Vue.js
