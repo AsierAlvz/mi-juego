@@ -52,3 +52,9 @@ npm run lint
 ## Elden Ring Memory Game
 
 Juego de memoria con temática de Elden Ring desarrollado con Vue.js
+
+## Tests y calidad de código
+
+- Tests unitarios con Vitest
+- Análisis de código con ESLint y OxLint
+- Pipeline CI/CD con Jenkins
